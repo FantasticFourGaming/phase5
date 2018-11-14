@@ -4,4 +4,3 @@ Jay (Pager, Nav Tab, Form)
 Sam (Alert, Modal, List)
 Ace (Buttons, Carousel, Jumbotron)
 
-Test
