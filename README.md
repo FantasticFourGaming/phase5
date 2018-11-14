@@ -2,6 +2,6 @@
 Brandon (Popovers, Tooltips, Collapse) 
 Jay (Pager, Nav Tab, Form)
 Sam (Alert, Modal, List)
-Ace (buttons, Carousel, Jumbotron)
+Ace (Buttons, Carousel, Jumbotron)
 
 Test
