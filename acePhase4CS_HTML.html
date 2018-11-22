@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <!--https://s3-us-west-2.amazonaws.com/cis3110-a4/-->
 <meta charset="utf-8">
@@ -9,6 +8,11 @@
 <title>Ace | Home</title>
 <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/cis3110-a4/acePhase4CS.css">
 <link href="https://s3-us-west-2.amazonaws.com/cis3110-a4/a_titleicon.png" rel="icon" type="image/gif">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!--Brandon's Bootstrap sources-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
 <!--Bootsrap CDN Top section-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -141,7 +145,7 @@
 <!--Main script section-->
 <script>
 
-var images = ["minecraft_mod.png", "fallout4_mod.png", "destiny2_mod.png", "dontstarve_mod.png", "leagueoflegends_mod.png", "fortnite_mod.png"];
+var images = ["minecraft_mod.png", "fallout4_mod.png", "destiny2_mod.png", "dontstarve_mod.png", "leagueoflegends_mod.png", "fortnite_mod.png","dontstarve_mod.png", "leagueoflegends_mod.png", "fortnite_mod.png"];
 var names = ["Minecraft","Fallout4","Destiny2","DontStarve","LeagueofLegends","Fortnite"];
 var desc = ["Minecraft is a 2011 sandbox video game created by Swedish game developer Markus Persson and later developed by Mojang. The game allows players to build with a variety of different blocks in a 3D procedurally generated world, requiring creativity from players.",
 			"Fallout 4 is a post-apocalyptic action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks. It is the fifth major installment in the Fallout series and was released worldwide on November 10, 2015, for Microsoft Windows, PlayStation 4 and Xbox One.",
@@ -155,7 +159,7 @@ var pValues = ["Explore. Gather. Craft. Fight. Survive ... ",
 			   "The best advice here is to stay well-fed.",
 			   "Let your legend be known.",
 			   "Build. Shoot. Build. Shoot. Repeat."];
-var imageIDs = ["a1","a2","a3","a4","a5","a6"];
+var imageIDs = ["a1","a2","a3","a4","a5","a6","a7","a8","a9"];
 var imageURLs = ["https://s3.us-west-2.amazonaws.com/cis3110-a2/acePhase2CS_detailPage.html?img=https://s3-us-west-2.amazonaws.com/cis3110-a2/minecraft.jpg&names=Minecraft&desc=Minecraft%20is%20a%202011%20sandbox%20video%20game%20created%20by%20Swedish%20game%20developer%20Markus%20Persson%20and%20later%20developed%20by%20Mojang.%20The%20game%20allows%20players%20to%20build%20with%20a%20variety%20of%20different%20blocks%20in%20a%203D%20procedurally%20generated%20world,%20requiring%20creativity%20from%20players.",
 				 "https://s3.us-west-2.amazonaws.com/cis3110-a2/acePhase2CS_detailPage.html?img=https://s3-us-west-2.amazonaws.com/cis3110-a2/fallout4.jpg&names=Fallout%204&desc=Fallout%204%20is%20a%20post-apocalyptic%20action%20role-playing%20video%20game%20developed%20by%20Bethesda%20Game%20Studios%20and%20published%20by%20Bethesda%20Softworks.%20It%20is%20the%20fifth%20major%20installment%20in%20the%20Fallout%20series%20and%20was%20released%20worldwide%20on%20November%2010,%202015,%20for%20Microsoft%20Windows,%20PlayStation%204%20and%20Xbox%20One.",
 				 "https://s3.us-west-2.amazonaws.com/cis3110-a2/acePhase2CS_detailPage.html?img=https://s3-us-west-2.amazonaws.com/cis3110-a2/destiny2.jpg&names=Destiny%202&desc=Destiny%202%20is%20an%20online-only%20multiplayer%20first-person%20shooter%20video%20game%20developed%20by%20Bungie%20and%20published%20by%20Activision.%20It%20was%20released%20for%20PlayStation%204%20and%20Xbox%20One%20on%20September%206,%202017,%20followed%20by%20a%20Microsoft%20Windows%20version%20the%20following%20month.%20It%20is%20the%20sequel%20to%202014%27s%20Destiny%20and%20its%20subsequent%20expansions.",
@@ -189,10 +193,10 @@ var url;
 var containMe = document.createElement("div");
 	containMe.setAttribute("class","containMe");
 	
-<!--for loop: Starts-->	
+//<!--for loop: Starts-->	
 for(var i=0; i < images.length; i++)
  {
- <!--Appends image to Div-->
+ //<!--Appends image to Div-->
   url = "https://s3-us-west-2.amazonaws.com/cis3110-a4/" + images[i];
   var boxDiv = boxDivs[i];
   var box = document.createElement("div");
@@ -208,7 +212,7 @@ for(var i=0; i < images.length; i++)
   img.setAttribute("src", url);
   anchor.appendChild(img);
 
- <!--Appends the title(h3) and short description-->
+ //!--Appends the title(h3) and short description-->
   var name = names[i];
   var divInBox = document.createElement("div");
   divInBox.setAttribute("class", name);
@@ -225,26 +229,32 @@ for(var i=0; i < images.length; i++)
   var br = document.createElement("br");
   divInBox.appendChild(br);
   
- <!--Appends buttons (fav and unfav)-->
+ //<!--Appends buttons (fav and unfav)-->
   var firstBtnNum = firstBtnNums[i];
   var favBtn = document.createElement("button");
   favBtn.setAttribute("type","button");
-  favBtn.setAttribute("class","btn btn-primary");
-  favBtn.setAttribute("id", firstBtnNum);
+  favBtn.setAttribute("class","btn btn-secondary");
+	favBtn.setAttribute("id", firstBtnNum);
+	favBtn.setAttribute("data-toggle","tooltip");
+	favBtn.setAttribute("data-placement","top");
+	favBtn.setAttribute("title","Hi");
   var favBtnValue = document.createTextNode("Make favorite");
   favBtn.appendChild(favBtnValue);
   var secondBtnNum = secondBtnNums[i];
   var unfavBtn = document.createElement("button");
   unfavBtn.setAttribute("type","button");
   unfavBtn.setAttribute("class","btn btn-secondary");
-  unfavBtn.setAttribute("id", secondBtnNum);
+	unfavBtn.setAttribute("id", secondBtnNum);
+	unfavBtn.setAttribute("data-toggle","popover");
+	unfavBtn.setAttribute("data-container","body");
+	unfavBtn.setAttribute("data-placement","top");
+	unfavBtn.setAttribute("title","Hello");
   var unfavBtnValue = document.createTextNode("Unfavorite");
   unfavBtn.appendChild(unfavBtnValue);
   divInBox.appendChild(favBtn);
   divInBox.appendChild(unfavBtn);
   
-	 
- <!--Image and textbox alternating-->
+ //<!--Image and textbox alternating-->
   if (i==0 || i==2 || i==4) {
 	box.appendChild(anchor);
 	box.appendChild(divInBox);
@@ -256,7 +266,7 @@ for(var i=0; i < images.length; i++)
 	box.appendChild(anchor);
   }
   containMe.appendChild(box);
-   
+ 
 	 
  <!--Jumbotron starts-->
   // jDiv represent the Jumbotron Div/Box
@@ -305,7 +315,6 @@ for(var i=0; i < images.length; i++)
 				"exploration, survival game from start to finish. But wait! There are numerous recruitable NPCs for hired. Your "+
 				"companion options vary from a german shepard doggo, a bloodthirsty super-mutant, ruthless mercenaries, to mysterious "+
 				"robotic synths and many more. Furthermore, there are many factions just waiting to be discovered. What are you waiting for?");
-
 	var jBr1 = document.createElement("br"); 
 	var jBr2 = document.createElement("br");
   }else if (i==2) {
@@ -320,7 +329,6 @@ for(var i=0; i < images.length; i++)
 										"player adventures and multiplayer conquest, making it an appealing option for all gamers. "+
 										"From persoanl experience, I highly recommend the Huneter class. In my opionion, the Hunter "+
 										"class is both beginner friendly and the most fun.");
-
 	var jBr1 = document.createElement("br"); 
 	var jBr2 = document.createElement("br");
   }else if (i==3) {
@@ -517,7 +525,6 @@ for(var i=0; i < images.length; i++)
   document.body.appendChild(containMe);
  }
  <!--for loop: ends-->
-
 <!--Functions for exterior web btn click-->
 $("#minecraft_btn").click(function(){
 		// displays an alert
@@ -602,6 +609,14 @@ var default6 = document.getElementById("a6").href;
 var detail;
 var cacheDom;
  
+//Brandon's functions for tooltip&popover
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
 var cURL = getCookie();
 var heart_icon = document.createElement("img");
 var heart_icon_URL = "https://s3-us-west-2.amazonaws.com/cis3110-a4/heart_icon.png";
@@ -742,7 +757,7 @@ $(document).ready(function(){
 		detail = default1 + "&fav=1";
 		$("#a1").attr("href", detail);
     });
-	// when btn2 (unfavorite) is clicked 
+     // when btn2 (unfavorite) is clicked 
     $("#btn2").click(function(){
 		// displays an alert
 		alert("Minecraft has been unmarked from favorite.");
