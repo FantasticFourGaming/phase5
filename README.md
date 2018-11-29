@@ -1,6 +1,6 @@
 # phase5
 Brandon (Popovers, Tooltips, Collapse) 
-Jay (Pager, Nav Tab, Form)
+Jay (Pager, Nav Tab, Table)
 Sam (Alert, Modal, List)
 Ace (Buttons, Carousel, Jumbotron)
 
