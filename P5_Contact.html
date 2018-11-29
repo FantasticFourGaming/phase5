@@ -1,8 +1,11 @@
-<html><head>
+<html>
+<head>
 <!--https://s3-us-west-2.amazonaws.com/cis3110-a4/-->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/cis3110-a4/bootstrap.css"> <!--modified bootstrap.css file-->
+<!--Jay's Bootstrap sources-->
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/bucket3110fall18/Phase5/p5_bootstrap.css">
 <title>Ace | Home</title>
 <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/cis3110-a4/acePhase4CS.css">
 <link href="https://s3-us-west-2.amazonaws.com/cis3110-a4/a_titleicon.png" rel="icon" type="image/gif">
@@ -30,7 +33,7 @@
               <a class="nav-link" href="https://s3-us-west-2.amazonaws.com/cis3110-a4/acePhase4CS_Features.html">Features</a>
                   </li>
                   <li class="nav-item">
-                  <!--Jay's Additional Navigation Bar Functions-->
+<!--Additional Navigation Bar Functions-->
               <a class="nav-link" href="#">PC Games</a>
             </li>
             <li class="nav-item">
@@ -49,8 +52,11 @@
 	  <div class="container">
 		<h1 class="display-4" id="about">What is the purpose of this website?</h1>
 		<p class="lead">This website purpose is to help parents and grandparents pick a game for their loved ones for the holiday. Numerous games are released yearly and picking a right one can be a momentous task. 
-            We at "%s" compiled a list of top games based on the system to help you shop for your loved ones!
+            We at T6 compiled a list of top games based on the system to help you shop for your loved ones! <br><br>
+            Please do not hestitate to contact our contributors if you have any question.
         <br><br>
+
+        <a id="about_btn" class="btn btn-primary btn-lg" role="button">Back To Home</a> 
 		<!--
             </p><h1 class="display-4" id="about">What is the content of this website?</h1>
 		<p class="lead">This website displays my top six favorite video games of all time in no particular order. Each game will have
@@ -59,40 +65,47 @@
 						information for further inquiries. At the top of the page, there is a carousel displaying additional images for 
                         each game.<br><br>
         -->
-			<!--This anchor doesn't have an href bc it will be determined by a confirm() method @$("#minecraft_btn").click(function()) in script below-->
-            
-            <table class="table table-hover">
+      <!--This anchor doesn't have an href bc it will be determined by a confirm() method @$("#minecraft_btn").click(function()) in script below-->
+      </p>
+    </div>  
+  </div>    
+  <!--jumbotron_about: ends-->
+<!--Bootstrap comp: Table starts-->   
+            <div>
+            <table class="table table-borderless">
             <thead>
               <tr>
                 <th>Contributor</th>
+                <th>Platform</th>
                 <th>Email</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Jay Laoharoj</td>
-                <td><a href="https://s3-us-west-2.amazonaws.com/bucket3110fall18/Phase4/p4_2.html">Phase 4</a></td>
+                <td>Mobile Games</td>
+                <td><a href="https://s3-us-west-2.amazonaws.com/bucket3110fall18/Phase4/p4_2.html">JLao@T6.com</a></td>
               </tr>  
               <tr>
                 <td>Brandon Lam</td>
-                <td><a href="https://s3.us-east-2.amazonaws.com/blam3110fall18/phase+4/brandonP4.html">Phase 4</a></td>
+                <td>Board Games</td>
+                <td><a href="https://s3.us-east-2.amazonaws.com/blam3110fall18/phase+4/brandonP4.html">BLam@T6.com</a></td>
               </tr>
               <tr>
                 <td>Ace Suon</td>
-                <td><a href="https://s3-us-west-2.amazonaws.com/cis3110-a4/acePhase4CS_HTML.html">Phase 4</a></td>
+                <td>PC Games</td>
+                <td><a href="https://s3-us-west-2.amazonaws.com/cis3110-a4/acePhase4CS_HTML.html">Asuon@T6.com</a></td>
               </tr>
               <tr>
                 <td>Samantha Nila</td>
-                <td><a href="https://s3-us-west-2.amazonaws.com/311welcome/311-master/phase+1/SNP1/SNProj1.html">Phase 4</a></td>
+                <td>Site Admin</td>
+                <td><a href="https://s3-us-west-2.amazonaws.com/311welcome/311-master/phase+1/SNP1/SNProj1.html">SNila@T6.com</a></td>
               </tr>
             </tbody>
           </table>
-          <a id="about_btn" class="btn btn-primary btn-lg" role="button">Back To Home</a> 
-		</p>
-	  </div>
-	</div>
-	<!--jumbotron_about: ends-->
-    <!--table start-->
+          </div>
+          <br><br>
+<!--Bootstrap comp: Table End-->
     
 <script>
 $("#about_btn").click(function(){
@@ -112,13 +125,14 @@ $("#about_btn").click(function(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>		
 
-</body></html>
+</body>
 
-<!--Pager Starter-->
-<ul class="pager"> 
+<!--Pager Starter. <li class="disabled"> diables button-->
+    <ul class="pager"> 
         <li><a href="#">PC Games</a></li>
         <li><a href="#">Mobile Games</a></li>
-            <li><a href="#">Board Games</a></li>
-            <li><a href="https://s3-us-west-2.amazonaws.com/cis3110-a4/acePhase4CS_About.html">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+        <li><a href="#">Board Games</a></li>
+        <li><a href="https://s3-us-west-2.amazonaws.com/cis3110-a4/acePhase4CS_About.html">About Us</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
+ </html>
